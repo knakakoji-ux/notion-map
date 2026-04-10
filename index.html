@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notion構成マップ｜SEAM</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f8f8f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 24px;
+  }
+  .container {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 24px;
+  }
+  svg text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  .node { cursor: pointer; }
+  .node:hover rect, .node:hover ellipse { opacity: 0.85; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Notion 構成マップ｜SEAM</h1>
+  <p class="subtitle">どこに何が溜まるか・合言葉・参照ルール元。各ボックスをクリックするとNotionページに飛びます。</p>
+
+<svg width="100%" viewBox="0 0 840 1060" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<!-- ルート -->
+<a href="https://www.notion.so/2f1847a9193580458bdceff44a99b951" target="_blank" class="node">
+<rect x="270" y="20" width="300" height="48" rx="10" fill="#f0efe8" stroke="#888780" stroke-width="0.8"/>
+<text x="420" y="39" text-anchor="middle" font-size="14" font-weight="600" fill="#2c2c2a">プロジェクト＆タスク（ルート）</text>
+<text x="420" y="57" text-anchor="middle" font-size="12" fill="#5f5e5a">Notionワークスペースの起点</text>
+</a>
+
+<!-- 分岐矢印 -->
+<path d="M340 68 L160 124" fill="none" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<path d="M420 68 L420 124" fill="none" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<path d="M500 68 L660 124" fill="none" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+
+<!-- 発生条件 -->
+<text x="210" y="104" text-anchor="middle" font-size="11" fill="#aaa">PJ受注時</text>
+<text x="420" y="104" text-anchor="middle" font-size="11" fill="#aaa">FMT化・自動化検知時</text>
+<text x="630" y="104" text-anchor="middle" font-size="11" fill="#aaa">タスク発生時（全PJ）</text>
+
+<!-- ===== 左: 明治PJ ===== -->
+<a href="https://www.notion.so/2fd847a9193580abac6fef1fd38bd1fb" target="_blank" class="node">
+<rect x="60" y="124" width="200" height="52" rx="10" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.8"/>
+<text x="160" y="145" text-anchor="middle" font-size="14" font-weight="600" fill="#085041">明治様＿ノンアル</text>
+<text x="160" y="163" text-anchor="middle" font-size="12" fill="#0f6e56">明治PJ固有コンテンツ</text>
+</a>
+<line x1="160" y1="176" x2="160" y2="186" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="60" y="186" width="200" height="36" rx="6" fill="#f4f4f0" stroke="#ccc" stroke-width="0.5"/>
+<text x="160" y="199" text-anchor="middle" font-size="11" fill="#888">合言葉</text>
+<text x="160" y="214" text-anchor="middle" font-size="12" fill="#333">「明治PJに入れて」</text>
+<line x1="160" y1="222" x2="160" y2="232" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="60" y="232" width="200" height="48" rx="6" fill="#f4f4f0" stroke="#ccc" stroke-width="0.5"/>
+<text x="160" y="246" text-anchor="middle" font-size="11" fill="#888">参照ルール元</text>
+<text x="160" y="261" text-anchor="middle" font-size="12" fill="#333">UP直接記述</text>
+<text x="160" y="275" text-anchor="middle" font-size="11" fill="#888">メモリでIDを確認→書込</text>
+<line x1="160" y1="280" x2="160" y2="290" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="60" y="290" width="200" height="210" rx="10" fill="#f4f4f0" stroke="#ccc" stroke-width="0.5"/>
+<text x="160" y="310" text-anchor="middle" font-size="11" fill="#888">溜まるもの</text>
+<a href="https://www.notion.so/31a847a9193580b383d5d88693f58ceb" target="_blank" class="node">
+<rect x="76" y="320" width="168" height="28" rx="4" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="160" y="338" text-anchor="middle" font-size="12" fill="#444">N1分析ページ（各人）</text>
+</a>
+<a href="https://www.notion.so/33b847a91935818b8e0bd4de934c04f8" target="_blank" class="node">
+<rect x="76" y="354" width="168" height="28" rx="4" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="160" y="372" text-anchor="middle" font-size="12" fill="#444">対象者マップ・議事録</text>
+</a>
+<a href="https://www.notion.so/32f847a91935817385b5f95ed2ea2cec" target="_blank" class="node">
+<rect x="76" y="388" width="168" height="28" rx="4" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="160" y="406" text-anchor="middle" font-size="12" fill="#444">プロジェクト棚卸し</text>
+</a>
+<rect x="76" y="422" width="168" height="66" rx="4" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="160" y="440" text-anchor="middle" font-size="12" fill="#444">今後追加：</text>
+<text x="160" y="456" text-anchor="middle" font-size="11" fill="#888">資料・定例議事録</text>
+<text x="160" y="472" text-anchor="middle" font-size="11" fill="#888">コンセプト評価結果</text>
+
+<!-- ===== 中: AI FMT化/自動化 ===== -->
+<a href="https://www.notion.so/334847a91935801c896df020e4f02219" target="_blank" class="node">
+<rect x="320" y="124" width="200" height="52" rx="10" fill="#eeedfe" stroke="#534ab7" stroke-width="0.8"/>
+<text x="420" y="145" text-anchor="middle" font-size="14" font-weight="600" fill="#3c3489">AI FMT化/自動化</text>
+<text x="420" y="163" text-anchor="middle" font-size="12" fill="#534ab7">汎用FMT・自動化PJ</text>
+</a>
+<line x1="420" y1="176" x2="420" y2="186" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="320" y="186" width="200" height="36" rx="6" fill="#f4f4f0" stroke="#ccc" stroke-width="0.5"/>
+<text x="420" y="199" text-anchor="middle" font-size="11" fill="#888">合言葉</text>
+<text x="420" y="214" text-anchor="middle" font-size="12" fill="#333">「FMT化」「落としといて」「スキル化」</text>
+<line x1="420" y1="222" x2="420" y2="232" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="320" y="232" width="200" height="48" rx="6" fill="#f4f4f0" stroke="#ccc" stroke-width="0.5"/>
+<text x="420" y="246" text-anchor="middle" font-size="11" fill="#888">参照ルール元</text>
+<text x="420" y="261" text-anchor="middle" font-size="12" fill="#333">UP→メモリ→Notion fetch</text>
+<text x="420" y="275" text-anchor="middle" font-size="11" fill="#888">FMT集約ページIDをfetch</text>
+<line x1="420" y1="280" x2="420" y2="290" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="320" y="290" width="200" height="210" rx="10" fill="#f4f4f0" stroke="#ccc" stroke-width="0.5"/>
+<text x="420" y="310" text-anchor="middle" font-size="11" fill="#888">溜まるもの</text>
+<a href="https://www.notion.so/33a847a91935819090eac1780311a483" target="_blank" class="node">
+<rect x="336" y="320" width="168" height="36" rx="4" fill="#eeedfe" stroke="#534ab7" stroke-width="0.8"/>
+<text x="420" y="334" text-anchor="middle" font-size="13" font-weight="600" fill="#3c3489">📦 FMT集約ページ</text>
+<text x="420" y="350" text-anchor="middle" font-size="11" fill="#534ab7">汎用FMTの正典</text>
+</a>
+<a href="https://www.notion.so/33c847a9193581f9adf0fc2b59117416" target="_blank" class="node">
+<rect x="336" y="362" width="168" height="28" rx="4" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="420" y="380" text-anchor="middle" font-size="12" fill="#444">📚 DB_Skill集</text>
+</a>
+<a href="https://www.notion.so/334847a9193580e19aa0f03689aa3362" target="_blank" class="node">
+<rect x="336" y="396" width="168" height="28" rx="4" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="420" y="414" text-anchor="middle" font-size="12" fill="#444">DB_AIエージェント集</text>
+</a>
+<rect x="336" y="430" width="168" height="58" rx="4" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="420" y="448" text-anchor="middle" font-size="12" fill="#444">今後追加：</text>
+<text x="420" y="464" text-anchor="middle" font-size="11" fill="#888">新FMT（明治タスクを</text>
+<text x="420" y="480" text-anchor="middle" font-size="11" fill="#888">抽象化したもの）</text>
+
+<!-- ===== 右: TasksDB ===== -->
+<a href="https://www.notion.so/2f1847a9193581728725c84cffc31db4" target="_blank" class="node">
+<rect x="580" y="124" width="200" height="52" rx="10" fill="#faeeda" stroke="#854f0b" stroke-width="0.8"/>
+<text x="680" y="145" text-anchor="middle" font-size="14" font-weight="600" fill="#633806">TasksDB</text>
+<text x="680" y="163" text-anchor="middle" font-size="12" fill="#854f0b">全PJ横断タスク管理</text>
+</a>
+<line x1="680" y1="176" x2="680" y2="186" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="580" y="186" width="200" height="36" rx="6" fill="#f4f4f0" stroke="#ccc" stroke-width="0.5"/>
+<text x="680" y="199" text-anchor="middle" font-size="11" fill="#888">合言葉</text>
+<text x="680" y="214" text-anchor="middle" font-size="12" fill="#333">「タスク起票して」「タスクに入れて」</text>
+<line x1="680" y1="222" x2="680" y2="232" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="580" y="232" width="200" height="48" rx="6" fill="#f4f4f0" stroke="#ccc" stroke-width="0.5"/>
+<text x="680" y="246" text-anchor="middle" font-size="11" fill="#888">参照ルール元</text>
+<text x="680" y="261" text-anchor="middle" font-size="12" fill="#333">UP直接記述</text>
+<text x="680" y="275" text-anchor="middle" font-size="11" fill="#888">メモリでTasksDB IDを確認</text>
+<line x1="680" y1="280" x2="680" y2="290" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="580" y="290" width="200" height="210" rx="10" fill="#f4f4f0" stroke="#ccc" stroke-width="0.5"/>
+<text x="680" y="310" text-anchor="middle" font-size="11" fill="#888">溜まるもの</text>
+<rect x="596" y="320" width="168" height="64" rx="4" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="680" y="338" text-anchor="middle" font-size="12" fill="#444">全PJの手動タスク</text>
+<text x="605" y="356" font-size="11" fill="#888"> 明治PJタスク</text>
+<text x="605" y="372" font-size="11" fill="#888"> AI FMT化タスク 他</text>
+<rect x="596" y="390" width="168" height="98" rx="4" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="680" y="408" text-anchor="middle" font-size="12" fill="#444">自動起票（FMT経由）</text>
+<text x="605" y="424" font-size="11" fill="#888"> ○○さんインタビュー</text>
+<text x="605" y="440" font-size="11" fill="#888"> ○○さん御礼送信</text>
+<text x="605" y="456" font-size="11" fill="#888"> ○○さんインサイト分析</text>
+<text x="605" y="472" font-size="11" fill="#888"> （今後PJごとに追加）</text>
+
+<!-- ===== 格納ルール ===== -->
+<rect x="40" y="524" width="760" height="148" rx="10" fill="#fafaf8" stroke="#ccc" stroke-width="0.8"/>
+<text x="420" y="546" text-anchor="middle" font-size="14" font-weight="600" fill="#333">格納ルール早見表</text>
+<rect x="56" y="558" width="356" height="100" rx="6" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="234" y="576" text-anchor="middle" font-size="12" font-weight="500" fill="#444">明治PJに入れるもの（具体）</text>
+<text x="72" y="594" font-size="11" fill="#666"> インタビュイーの個人情報・発言</text>
+<text x="72" y="610" font-size="11" fill="#666"> コンセプト名・TypeA/B定義</text>
+<text x="72" y="626" font-size="11" fill="#666"> N1分析・議事録・クライアント資料</text>
+<text x="72" y="642" font-size="11" fill="#999"> → 抽象化したらFMT集約ページへ</text>
+<rect x="428" y="558" width="356" height="100" rx="6" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="606" y="576" text-anchor="middle" font-size="12" font-weight="500" fill="#444">FMT集約ページに入れるもの（抽象）</text>
+<text x="444" y="594" font-size="11" fill="#666"> タスクの手順・フロー（汎用）</text>
+<text x="444" y="610" font-size="11" fill="#666"> テンプレート文・チェックリスト</text>
+<text x="444" y="626" font-size="11" fill="#666"> 汎用トリガー条件の詳細</text>
+<text x="444" y="642" font-size="11" fill="#999"> → 次PJでも使い回せる設計</text>
+
+<!-- ===== 自走フロー ===== -->
+<rect x="40" y="692" width="760" height="340" rx="10" fill="#fafaf8" stroke="#ccc" stroke-width="0.8"/>
+<text x="420" y="714" text-anchor="middle" font-size="14" font-weight="600" fill="#333">PJ自走フロー（目指す姿）</text>
+
+<rect x="56" y="728" width="130" height="34" rx="8" fill="#f0efe8" stroke="#888" stroke-width="0.8"/>
+<text x="121" y="749" text-anchor="middle" font-size="12" fill="#333">新規PJ受注</text>
+<line x1="186" y1="745" x2="206" y2="745" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="206" y="728" width="130" height="34" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.8"/>
+<text x="271" y="749" text-anchor="middle" font-size="12" fill="#085041">条件・背景入力</text>
+<line x1="336" y1="745" x2="356" y2="745" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="356" y="728" width="160" height="34" rx="8" fill="#eeedfe" stroke="#534ab7" stroke-width="0.8"/>
+<text x="436" y="749" text-anchor="middle" font-size="12" fill="#3c3489">FMT集約ページfetch</text>
+<line x1="516" y1="745" x2="536" y2="745" stroke="#aaa" stroke-width="0.8" marker-end="url(#arrow)"/>
+<rect x="536" y="728" width="130" height="34" rx="8" fill="#faeeda" stroke="#854f0b" stroke-width="0.8"/>
+<text x="601" y="749" text-anchor="middle" font-size="12" fill="#633806">PJ自走開始</text>
+
+<rect x="56" y="778" width="740" height="56" rx="6" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="426" y="796" text-anchor="middle" font-size="12" font-weight="500" fill="#444">自走する内容（明治PJで積み上げ中）</text>
+<text x="72" y="814" font-size="11" fill="#666"> タスク自動起票 / スケジュール管理 / メール送信 / カレンダー登録 / インタビュー設問生成 / tldv分析 / Notion記入 / 資料たたき台</text>
+
+<rect x="56" y="846" width="740" height="48" rx="6" fill="#fff" stroke="#e24b4a" stroke-width="0.8"/>
+<text x="426" y="864" text-anchor="middle" font-size="12" font-weight="500" fill="#444">人間の判断が必要なもの（ここに集中する）</text>
+<text x="72" y="882" font-size="11" fill="#666"> STP判断 / 矛盾深堀 / インサイト確定 / GO/NO-GO判断 / クリエイティブ方針</text>
+
+<rect x="56" y="906" width="740" height="48" rx="6" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+<text x="426" y="924" text-anchor="middle" font-size="12" font-weight="500" fill="#444">蓄積サイクル</text>
+<text x="72" y="942" font-size="11" fill="#666"> 明治PJで実施 → 抽象化 → FMT集約ページへ格納 → 次PJで再利用 → さらに精度UP</text>
+
+<text x="420" y="1002" text-anchor="middle" font-size="11" fill="#bbb">各ボックスをクリックするとNotionページに飛びます</text>
+</svg>
+</div>
+</body>
+</html>
